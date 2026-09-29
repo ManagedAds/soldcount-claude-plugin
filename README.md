@@ -46,8 +46,8 @@ https://soldcount.com/privacy.
 
 ## Limits
 
-Per account and per hour: 600 reads, 30 written verdicts and 60 changes. Up to 8 alert streams can
-be open at once, and an account watches up to 100 listings by default.
+Per account and per hour: 600 reads and 60 changes. Up to 8 alert streams can be open at once, and
+an account watches up to 100 listings by default. No tool costs a language-model call.
 
 ## Your own agent
 
