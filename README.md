@@ -14,12 +14,12 @@ The plugin adds two things to Claude:
   Claude tools to read your SoldCount data (the listings you watch, how many sold in the last 24
   hours, 7 days and 30 days, prices against the same product sold elsewhere, rivals undercutting
   you, alerts and your morning brief) and to change your own SoldCount workspace (your watchlist,
-  tags, alert levels and muted alerts).
+  tags, alert levels and silenced alerts).
 - **The `soldcount` skill**, which explains to Claude what each tool returns, how to read a
   confidence level, and what to say when SoldCount does not have enough data yet.
 
 Ask things like "what moved on my watchlist this week?", "is anyone undercutting my pillow
-listing?" or "mute alerts for this listing".
+listing?" or "silence alerts for this listing".
 
 ## What it never does
 
@@ -48,6 +48,12 @@ https://soldcount.com/privacy.
 
 Per account and per hour: 600 reads, 30 written verdicts and 60 changes. Up to 8 alert streams can
 be open at once, and an account watches up to 100 listings by default.
+
+## Your own agent
+
+The same tools work outside Claude too. An agent on your own computer connects with an access key
+or by signing in, and reads its instructions from https://soldcount.com/soldcount-agent.md. Use one
+SoldCount connection per client, or every tool shows twice.
 
 ## Support
 
