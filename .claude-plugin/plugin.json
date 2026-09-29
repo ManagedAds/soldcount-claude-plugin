@@ -1,0 +1,14 @@
+{
+  "name": "soldcount",
+  "displayName": "SoldCount",
+  "version": "1.0.0",
+  "description": "Ask Claude how the TikTok Shop listings you watch are selling: sold in the last 24 hours, 7 days and 30 days, prices against the same product elsewhere, rivals undercutting you, and alerts. Read-only on TikTok; changes only your own SoldCount watchlist, tags and alerts.",
+  "author": {
+    "name": "Managed Ads Inc.",
+    "email": "support@soldcount.com",
+    "url": "https://soldcount.com"
+  },
+  "homepage": "https://soldcount.com/claude",
+  "license": "MIT",
+  "keywords": ["tiktok-shop", "ecommerce", "sales", "pricing", "competitors"]
+}
