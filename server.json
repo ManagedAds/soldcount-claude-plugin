@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.soldcount/soldcount",
+  "title": "SoldCount",
+  "description": "How fast TikTok Shop listings sell: sold in 24 hours, 7 and 30 days, prices and undercut rivals",
+  "version": "1.4.0",
+  "websiteUrl": "https://soldcount.com/claude",
+  "repository": {
+    "url": "https://github.com/ManagedAds/soldcount-claude-plugin",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.soldcount.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer sc_...' SoldCount access key. Leave unset to sign in instead.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

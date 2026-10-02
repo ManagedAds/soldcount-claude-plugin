@@ -1,0 +1,21 @@
+{
+  "name": "soldcount",
+  "owner": {
+    "name": "Managed Ads Inc.",
+    "email": "support@soldcount.com",
+    "url": "https://soldcount.com"
+  },
+  "metadata": {
+    "description": "SoldCount for Claude Code: TikTok Shop sales, prices and rivals from the listings you watch."
+  },
+  "plugins": [
+    {
+      "name": "soldcount",
+      "source": "./",
+      "description": "Ask Claude how the TikTok Shop listings you watch are selling: sold in the last 24 hours, 7 days and 30 days, prices against the same product elsewhere, rivals undercutting you, and alerts.",
+      "homepage": "https://soldcount.com/claude",
+      "category": "productivity",
+      "keywords": ["tiktok-shop", "ecommerce", "sales", "pricing", "competitors"]
+    }
+  ]
+}

@@ -13,13 +13,50 @@ The plugin adds two things to Claude:
 - **The SoldCount connector**, a remote MCP server at `https://mcp.soldcount.com/mcp`. It gives
   Claude tools to read your SoldCount data (the listings you watch, how many sold in the last 24
   hours, 7 days and 30 days, prices against the same product sold elsewhere, rivals undercutting
-  you, alerts and your morning brief) and to change your own SoldCount workspace (your watchlist,
+  you, alerts and your daily summary) and to change your own SoldCount workspace (your watchlist,
   tags, alert levels and silenced alerts).
 - **The `soldcount` skill**, which explains to Claude what each tool returns, how to read a
   confidence level, and what to say when SoldCount does not have enough data yet.
 
-Ask things like "what moved on my watchlist this week?", "is anyone undercutting my pillow
+Ask things like "which of my listings are selling faster than last week?", "is anyone undercutting my pillow
 listing?" or "silence alerts for this listing".
+
+## Install
+
+Pick the line for your assistant. Use one of them, not several: two SoldCount connections in one
+client show every tool twice.
+
+- **Claude (web, desktop and mobile):** add SoldCount from the directory of connectors and plugins
+  in Claude's settings.
+- **Claude Code:** add this repository as a plugin marketplace, then install the plugin.
+
+  ```bash
+  /plugin marketplace add ManagedAds/soldcount-claude-plugin
+  /plugin install soldcount@soldcount
+  ```
+
+- **The skill alone, for any assistant that reads agent skills** (Claude Code, Codex, Cursor and
+  others):
+
+  ```bash
+  npx skills add ManagedAds/soldcount-claude-plugin
+  ```
+
+  The skill tells your assistant how to read SoldCount's answers. It still needs the connector
+  below to reach your data.
+
+- **Cursor, VS Code or any other MCP client:** add the remote server
+  `https://mcp.soldcount.com/mcp` (Streamable HTTP). It asks you to sign in to SoldCount the first
+  time. The server is also in the official MCP Registry as `com.soldcount/soldcount`.
+
+## How it answers
+
+SoldCount takes a reading of each listing you watch about every 6 hours. Sales are the rises of
+TikTok's sold counter between our readings. Every answer carries how sure it is. When a figure
+cannot be backed yet, you get the reason, for example "Day 3 of 7. Sales speed appears after about
+7 days of readings.", never a guessed number. A price TikTok hides, or shows differently to
+different visitors, is marked as an estimate (≈). Estimated sales value is units times listed
+price, and it excludes fees, refunds and promos.
 
 ## What it never does
 
